@@ -1,0 +1,12 @@
+version: '3'
+services:
+  redis-server: # Servicio redis necesario para el socket en cluster
+    image: 'redis'
+  find-your-star:
+    # build: . # Para construir la imagen desde el DockerFile
+    image: 'lotaryngia/find-your-star:latest' # Imagen creada del servidor
+    ports:
+      - "3000:3000" # Puerto del Socket
+      - "80:80" # Puerto Web
+    volumes:
+      - "/home/lotaryngia/galeria:/usr/local/etc/tiempo_real" # Ruta de la imagen para añadir las fotos que se desean obtener sus estrellas

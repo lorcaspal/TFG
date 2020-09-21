@@ -1,0 +1,6 @@
+# Referenced at D:\SynologyDrive\find_your_star_final\build\app\intermediates\merged_manifests\release\AndroidManifest.xml:21
+-keep class androidx.core.app.CoreComponentFactory { <init>(); }
+# Referenced at D:\SynologyDrive\find_your_star_final\build\app\intermediates\merged_manifests\release\AndroidManifest.xml:26
+-keep class com.example.find_your_star_final.MainActivity { <init>(); }
+# Referenced at D:\SynologyDrive\find_your_star_final\build\app\intermediates\merged_manifests\release\AndroidManifest.xml:21
+-keep class io.flutter.app.FlutterApplication { <init>(); }

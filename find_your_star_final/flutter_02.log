@@ -1,0 +1,85 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run -d chrome --web-hostname=192.168.0.165 --web-port=9898
+
+## exception
+
+FileSystemException: FileSystemException: Exists failed, path = 'build\flutter_assets' (OS Error: Acceso denegado.
+, errno = 5)
+
+```
+#0      _Directory.existsSync (dart:io/directory_impl.dart:94:7)
+#1      _Directory.createSync (dart:io/directory_impl.dart:126:11)
+#2      ForwardingDirectory.createSync (package:file/src/forwarding/forwarding_directory.dart:22:16)
+#3      ForwardingDirectory.createSync (package:file/src/forwarding/forwarding_directory.dart:22:16)
+#4      writeBundle (package:flutter_tools/src/bundle.dart:235:13)
+#5      WebDevFS.update (package:flutter_tools/src/build_runner/devfs_web.dart:801:15)
+#6      _ResidentWebRunner._updateDevFS (package:flutter_tools/src/build_runner/resident_web_runner.dart:694:54)
+<asynchronous suspension>
+#7      _ResidentWebRunner.run.<anonymous closure> (package:flutter_tools/src/build_runner/resident_web_runner.dart:481:47)
+<asynchronous suspension>
+#8      _ResidentWebRunner.run.<anonymous closure> (package:flutter_tools/src/build_runner/resident_web_runner.dart)
+#9      asyncGuard.<anonymous closure> (package:flutter_tools/src/base/async_guard.dart:111:32)
+#10     _rootRun (dart:async/zone.dart:1190:13)
+#11     _CustomZone.run (dart:async/zone.dart:1093:19)
+#12     _runZoned (dart:async/zone.dart:1630:10)
+#13     runZonedGuarded (dart:async/zone.dart:1618:12)
+#14     runZoned (dart:async/zone.dart:1547:12)
+#15     asyncGuard (package:flutter_tools/src/base/async_guard.dart:109:3)
+#16     _ResidentWebRunner.run (package:flutter_tools/src/build_runner/resident_web_runner.dart:451:20)
+#17     _rootRunUnary (dart:async/zone.dart:1198:47)
+#18     _CustomZone.runUnary (dart:async/zone.dart:1100:19)
+#19     _FutureListener.handleValue (dart:async/future_impl.dart:143:18)
+#20     Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:696:45)
+#21     Future._propagateToListeners (dart:async/future_impl.dart:725:32)
+#22     Future._completeWithValue (dart:async/future_impl.dart:529:5)
+#23     Future._asyncCompleteWithValue.<anonymous closure> (dart:async/future_impl.dart:567:7)
+#24     _rootRun (dart:async/zone.dart:1190:13)
+#25     _CustomZone.run (dart:async/zone.dart:1093:19)
+#26     _CustomZone.runGuarded (dart:async/zone.dart:997:7)
+#27     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1037:23)
+#28     _microtaskLoop (dart:async/schedule_microtask.dart:41:21)
+#29     _startMicrotaskLoop (dart:async/schedule_microtask.dart:50:5)
+#30     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:118:13)
+#31     _RawReceivePortImpl._handleMessage (dart:isolate-patch/isolate_patch.dart:169:5)
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel beta, 1.21.0-9.1.pre, on Microsoft Windows [VersiÃ³n 10.0.18362.1016], locale es-ES)
+    • Flutter version 1.21.0-9.1.pre at D:\flutter
+    • Framework revision be9bc8cb39 (6 days ago), 2020-08-18 09:46:08 -0700
+    • Engine revision 267070c17a
+    • Dart version 2.10.0 (build 2.10.0-7.2.beta)
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 29.0.3)
+    • Android SDK at C:\Users\Lorena\AppData\Local\Android\sdk
+    • Platform android-29, build-tools 29.0.3
+    • Java binary at: C:\Program Files\Android\Android Studio\jre\bin\java
+    • Java version OpenJDK Runtime Environment (build 1.8.0_242-release-1644-b01)
+    • All Android licenses accepted.
+
+[✓] Chrome - develop for the web
+    • Chrome at C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+
+[!] Android Studio (version 4.0)
+    • Android Studio at C:\Program Files\Android\Android Studio
+    ✗ Flutter plugin not installed; this adds Flutter specific functionality.
+    ✗ Dart plugin not installed; this adds Dart specific functionality.
+    • Java version OpenJDK Runtime Environment (build 1.8.0_242-release-1644-b01)
+
+[✓] VS Code (version 1.48.1)
+    • VS Code at C:\Users\Lorena\AppData\Local\Programs\Microsoft VS Code
+    • Flutter extension version 3.13.2
+
+[✓] Connected device (3 available)
+    • Web Server (web) • web-server • web-javascript • Flutter Tools
+    • Chrome (web)     • chrome     • web-javascript • Google Chrome 84.0.4147.135
+    • Edge (web)       • edge       • web-javascript • Microsoft Edge 84.0.522.63
+
+! Doctor found issues in 1 category.
+```

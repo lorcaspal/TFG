@@ -1,0 +1,14 @@
+{
+    "apps": [{
+        "name": "find-you-star",
+        "script": "web-api.js",
+        "args": ["--color"],
+        "env": {
+            "NODE_ENV": "production",
+            "PORT": 80,
+            "REDIS": "redis-server"
+        },
+        "instances": "max",
+        "exec_mode": "cluster"
+    }]
+}
